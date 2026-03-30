@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-airtel-red: #ED1C24;
+    --color-airtel-black: #1A1A1A;
+}
