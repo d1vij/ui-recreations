@@ -1,7 +1,0 @@
-{
-    "languages": {
-        "CSS": {
-            "language_servers": ["!biome", "..."]
-        }
-    }
-}
