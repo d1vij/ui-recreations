@@ -1,6 +1,5 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
-    import { page } from "$app/state";
 </script>
 
 {#snippet NavButton(to: string, title: string)}
@@ -12,7 +11,7 @@
 {/snippet}
 
 <header
-    class="bg-airtel-black fixed top-0 z-200 flex h-15 w-full items-center justify-between gap-4 px-8"
+    class="bg-airtel-black sticky top-0 z-200 flex h-15 w-full items-center justify-between gap-4 px-8"
 >
     <!-- Logo -->
     <div class="flex flex-nowrap items-center justify-center gap-2">

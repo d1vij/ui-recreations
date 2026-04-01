@@ -1,19 +1,16 @@
 <script lang="ts">
     import Label from "$lib/airtel-black/Label.svelte";
+
+    const stats: { count: string; title: string }[] = [
+        { count: "3", title: "srs generated" },
+        { count: "0", title: "problems actually fixed" },
+        { count: "21+", title: 'days of "patience"' },
+        { count: "30+", title: "stores just like this" },
+        { count: "∞", title: "hollow promises made" },
+    ];
 </script>
 
-{#snippet Stat(count: string, title: string)}
-    <div class="grid">
-        <div class="text-airtel-red text-6xl font-black">
-            {count}
-        </div>
-        <div class="text-center text-sm uppercase">
-            {title}
-        </div>
-    </div>
-{/snippet}
-
-<section class={["hero", "mt-15"]}>
+<section class={["hero"]}>
     <div
         class="mx-auto flex min-h-dvh max-w-210 flex-col items-center justify-center gap-8 pt-10 pb-12 text-center"
     >
@@ -32,11 +29,16 @@
         </p>
 
         <div class="flex w-full flex-nowrap justify-center gap-12">
-            {@render Stat("3", "srs generated")}
-            {@render Stat("0", "problems actually fixed")}
-            {@render Stat("21+", 'days of "patience"')}
-            {@render Stat("30+", "stores just like this")}
-            {@render Stat("∞", "hollow promises made")}
+            {#each stats as { count, title } (title)}
+                <div class="grid">
+                    <div class="text-airtel-red text-6xl font-black">
+                        {count}
+                    </div>
+                    <div class="text-center text-sm uppercase">
+                        {title}
+                    </div>
+                </div>
+            {/each}
         </div>
     </div>
 </section>

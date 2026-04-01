@@ -237,7 +237,7 @@
     </div>
 </section>
 
-<style>
+<style lang="postcss">
     @reference "tailwindcss";
     .feat-table {
         th {

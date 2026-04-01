@@ -64,24 +64,6 @@
     ];
 </script>
 
-{#snippet TimelineItem({ date, title, body, labels, resolved }: Timeline)}
-    <div class={["timeline-item space-y-1 pl-9", resolved ? "resolved" : "unresolved"]}>
-        <h2 class="text-airtel-red text-sm font-bold">{date}</h2>
-        <h1 class="text-lg font-bold">{title}</h1>
-        <p>
-            {body}
-        </p>
-
-        <div class="mt-3 flex gap-2">
-            {#each labels as label (label.content)}
-                <Label color={label.color}>
-                    {label.content}
-                </Label>
-            {/each}
-        </div>
-    </div>
-{/snippet}
-
 <section id="case-study" class={["p-25 px-8", "text-airtel-black"]}>
     <div class="mx-auto max-w-275">
         <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">case study</h2>
@@ -96,14 +78,28 @@
 
         <!-- Timeline -->
         <div class="timeline mt-8 min-h-dvh space-y-12 p-4 pl-2">
-            {#each timelineItems as item (item.title)}
-                {@render TimelineItem(item)}
+            {#each timelineItems as { body, date, labels, resolved, title } (title)}
+                <div class={["timeline-item space-y-1 pl-9", resolved ? "resolved" : "unresolved"]}>
+                    <h2 class="text-airtel-red text-sm font-bold">{date}</h2>
+                    <h1 class="text-lg font-bold">{title}</h1>
+                    <p>
+                        {body}
+                    </p>
+
+                    <div class="mt-3 flex gap-2">
+                        {#each labels as label (label.content)}
+                            <Label color={label.color}>
+                                {label.content}
+                            </Label>
+                        {/each}
+                    </div>
+                </div>
             {/each}
         </div>
     </div>
 </section>
 
-<style>
+<style lang="postcss">
     @reference "tailwindcss";
     .timeline {
         position: relative;

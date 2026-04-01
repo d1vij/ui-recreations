@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+    --font-playpen: "Playpen Sans";
+}
+
+@layer components {
+    .hover-highlight {
+        @apply underline decoration-stone-400 decoration-wavy transition-colors hover:decoration-stone-500;
+    }
+}

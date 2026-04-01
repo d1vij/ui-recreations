@@ -50,8 +50,12 @@
             class="grid grid-cols-1 overflow-clip rounded-2xl border border-b-0 border-white/10 md:grid-cols-2 lg:grid-cols-3"
         >
             {#each Array(6)}
-                {#each cards as card (card.title)}
-                    {@render Card(card)}
+                {#each cards as { body, subtitle, title } (title)}
+                    <div class={["card", "space-y-1 border-r border-b border-white/10 p-8"]}>
+                        <h1 class="text-airtel-red font-semibold">"{title}"</h1>
+                        <h2 class="text-xs italic opacity-40">{subtitle}</h2>
+                        <p class="opacity-80">{body}</p>
+                    </div>
                 {/each}
             {/each}
         </div>
@@ -65,17 +69,5 @@
     <h3 class="text-sm font-medium opacity-70">(this counter resets daily — optimistically)</h3>
 </section>
 
-{#snippet Card({ title, subtitle, body }: CardProps)}
-    <div class={["card", "space-y-1 border-r border-b border-white/10 p-8"]}>
-        <h1 class="text-airtel-red font-semibold">"{title}"</h1>
-        <h2 class="text-xs italic opacity-40">{subtitle}</h2>
-        <p class="opacity-80">{body}</p>
-    </div>
-{/snippet}
-
 <style>
-    @reference "tailwindcss";
-
-    .card {
-    }
 </style>
