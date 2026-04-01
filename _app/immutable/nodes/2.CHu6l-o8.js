@@ -1,1 +1,0 @@
-import{a as s,f as p}from"../chunks/CRekyCeE.js";import{p as m,t as f,a as i,c as l,r as n}from"../chunks/b6pWomEV.js";import{s as c}from"../chunks/C8lb2l9z.js";import{r as v}from"../chunks/BuNhqn2B.js";var h=p("<nav><a>Airtel Black</a></nav>");function k(r,t){m(t,!0);var a=h(),e=l(a);n(a),f(o=>c(e,"href",o),[()=>v("/airtel-black")]),s(r,a),i()}export{k as component};
