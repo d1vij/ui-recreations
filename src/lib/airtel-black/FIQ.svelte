@@ -48,11 +48,12 @@
                     ]}
                 >
                     <button
+                        class="w-full text-left"
                         onclick={() => {
                             openIdx = open ? null : idx;
                         }}
                     >
-                        <h1 class="cursor-pointer text-lg font-semibold text-white">{fiq.title}</h1>
+                        <h1 class="cursor-pointer text-lg max-w-[90%] font-semibold text-white">{fiq.title}</h1>
                     </button>
                     <p class={["pt-4 text-sm leading-6", open ? "" : "max-h-0 overflow-hidden"]}>
                         {fiq.body}

@@ -41,7 +41,7 @@
             <h1 class="">Things Airtel Customers</h1>
             <h1>Have Heard Before.</h1>
         </div>
-        <p class="max-w-1/2 text-lg">
+        <p class="md:max-w-[60%] text-lg">
             A curated collection of Airtel's greatest hits — real complaints, real patterns, real
             pain.
         </p>
@@ -129,7 +129,7 @@
             <h1>★★★★★ Reviews</h1>
             <h1>Airtel Wishes Were Real.</h1>
         </div>
-        <p class="max-w-1/2 text-lg">
+        <p class="md:max-w-[60%] text-lg">
             What customers would say if they were as delusional as Airtel's ticket system.
         </p>
 
@@ -169,18 +169,18 @@
     </div>
 </section>
 
-<section class=" p-25 px-8">
+<section class="p-25 px-8">
     <div class="text-airtel-black mx-auto max-w-275">
         <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">customer love</h2>
         <div class="mt-4 mb-5 text-4xl font-black">
             <h1>Airtel: What You Pay For</h1>
             <h1>vs. What You Get.</h1>
         </div>
-        <p class="max-w-1/2 text-lg">
+        <p class="md:max-w-[60%] text-lg">
             A side-by-side comparision that Airtel's marketing team hopes you never see.
         </p>
 
-        <table class="feat-table w-full overflow-clip rounded-2xl">
+        <table class="feat-table mt-4 w-full overflow-clip rounded-2xl">
             <thead class="">
                 <tr class="bg-airtel-red overflow-clip text-sm text-white uppercase">
                     <th class=""> feature </th>
@@ -241,7 +241,7 @@
     @reference "tailwindcss";
     .feat-table {
         th {
-            @apply p-3 pl-6 text-left;
+            @apply p-1 pl-6 text-left md:p-3;
         }
         tbody {
             color: white;
@@ -257,7 +257,7 @@
                     &:first-child {
                         @apply font-semibold text-white;
                     }
-                    @apply p-3 pl-6 text-sm font-medium text-white/65;
+                    @apply p-3 pl-4 text-xs font-medium text-white/65 md:pl-6 md:text-sm;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
                 }
             }

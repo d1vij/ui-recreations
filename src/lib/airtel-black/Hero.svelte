@@ -12,29 +12,30 @@
 
 <section class={["hero"]}>
     <div
-        class="mx-auto flex min-h-dvh max-w-210 flex-col items-center justify-center gap-8 pt-10 pb-12 text-center"
+        class="mx-auto flex min-h-dvh max-w-210 flex-col items-center justify-center gap-8 pt-10 pb-12 px-2 text-center md:pt-10"
     >
         <Label class="" color="red" outline>★★★★★ A Premium Customer Experience ★★★★★</Label>
-        <div class="text-8xl">
+        <!-- <div class="text-[10dvw] md:text-8xl"> -->
+        <div class="text-[clamp(--spacing(4),10dvw,--spacing(24))]">
             <h1 class="font-black tracking-tighter text-white">Your issue has been</h1>
-            <span
+            <span class="text-nowrap"
                 ><span class="text-white/50 line-through">resolved</span>
                 <span class="text-airtel-red font-black">ignored.</span></span
             >
         </div>
-        <p class="max-w-150 text-xl">
+        <p class="max-w-150 text-sm md:text-xl">
             Welcome to Airtel Blackout — a love letter to India's most profitable telecom, where the
             only thing faster than your "up to 1 Gbps" connection is the speed at which they close
             your tickets without reading them.
         </p>
 
-        <div class="flex w-full flex-nowrap justify-center gap-12">
+        <div class="flex w-full flex-wrap justify-center gap-12 md:flex-nowrap">
             {#each stats as { count, title } (title)}
                 <div class="grid">
-                    <div class="text-airtel-red text-6xl font-black">
+                    <div class="text-airtel-red text-3xl font-black md:text-6xl">
                         {count}
                     </div>
-                    <div class="text-center text-sm uppercase">
+                    <div class="text-center text-sm uppercase md:text-sm w-[16ch]">
                         {title}
                     </div>
                 </div>

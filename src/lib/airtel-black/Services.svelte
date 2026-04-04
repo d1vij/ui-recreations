@@ -62,7 +62,7 @@
             <br />
             <span>Premium Neglect.</span>
         </div>
-        <p class="max-w-[60%] text-lg">
+        <p class="md:max-w-[60%] text-lg">
             Airtel doesn't just provide connectivity. They provide a full emotional journey — from
             hope to despair, all for a premium price. Think of it as therapy, except your therapist
             keeps insisting you're fine while your house is on fire.
@@ -90,7 +90,7 @@
         </div>
     </div>
 </section>
-<section class="bg-airtel-red h-60 p-16 text-center">
+<section class="bg-airtel-red min-h-60 p-16 text-center">
     <div class="text-3xl text-white">
         <p>"I admire the optimism.</p>
         <p>Unfortunately, <span class="text-airtel-red">optimism does not route packets.</span>"</p>
