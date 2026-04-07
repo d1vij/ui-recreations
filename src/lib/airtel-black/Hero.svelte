@@ -12,7 +12,7 @@
 
 <section class={["hero"]}>
     <div
-        class="mx-auto flex min-h-dvh max-w-210 flex-col items-center justify-center gap-8 pt-10 pb-12 px-2 text-center md:pt-10"
+        class="mx-auto flex min-h-dvh max-w-210 flex-col items-center justify-center gap-8 px-2 pt-10 pb-12 text-center md:pt-10"
     >
         <Label class="" color="red" outline>★★★★★ A Premium Customer Experience ★★★★★</Label>
         <!-- <div class="text-[10dvw] md:text-8xl"> -->
@@ -35,7 +35,7 @@
                     <div class="text-airtel-red text-3xl font-black md:text-6xl">
                         {count}
                     </div>
-                    <div class="text-center text-sm uppercase md:text-sm w-[16ch]">
+                    <div class="w-[16ch] text-center text-sm uppercase md:text-sm">
                         {title}
                     </div>
                 </div>

@@ -62,7 +62,7 @@
             <br />
             <span>Premium Neglect.</span>
         </div>
-        <p class="md:max-w-[60%] text-lg">
+        <p class="text-lg md:max-w-[60%]">
             Airtel doesn't just provide connectivity. They provide a full emotional journey — from
             hope to despair, all for a premium price. Think of it as therapy, except your therapist
             keeps insisting you're fine while your house is on fire.

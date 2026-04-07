@@ -41,7 +41,7 @@
             <h1 class="">Things Airtel Customers</h1>
             <h1>Have Heard Before.</h1>
         </div>
-        <p class="md:max-w-[60%] text-lg">
+        <p class="text-lg md:max-w-[60%]">
             A curated collection of Airtel's greatest hits — real complaints, real patterns, real
             pain.
         </p>
@@ -129,7 +129,7 @@
             <h1>★★★★★ Reviews</h1>
             <h1>Airtel Wishes Were Real.</h1>
         </div>
-        <p class="md:max-w-[60%] text-lg">
+        <p class="text-lg md:max-w-[60%]">
             What customers would say if they were as delusional as Airtel's ticket system.
         </p>
 
@@ -176,7 +176,7 @@
             <h1>Airtel: What You Pay For</h1>
             <h1>vs. What You Get.</h1>
         </div>
-        <p class="md:max-w-[60%] text-lg">
+        <p class="text-lg md:max-w-[60%]">
             A side-by-side comparision that Airtel's marketing team hopes you never see.
         </p>
 

@@ -35,7 +35,7 @@
 
         <!-- FIQs -->
         <div class="p-8">
-            {#each fiqs as fiq, idx}
+            {#each fiqs as fiq, idx (idx)}
                 {@const open = idx === openIdx}
                 <!-- giving them the same name ensures that only one remains open at any given time -->
                 <div
@@ -53,7 +53,9 @@
                             openIdx = open ? null : idx;
                         }}
                     >
-                        <h1 class="cursor-pointer text-lg max-w-[90%] font-semibold text-white">{fiq.title}</h1>
+                        <h1 class="max-w-[90%] cursor-pointer text-lg font-semibold text-white">
+                            {fiq.title}
+                        </h1>
                     </button>
                     <p class={["pt-4 text-sm leading-6", open ? "" : "max-h-0 overflow-hidden"]}>
                         {fiq.body}

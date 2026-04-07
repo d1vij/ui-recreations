@@ -41,7 +41,7 @@
 <script lang="ts">
     import Cell from "./Cell.svelte";
     import { type BingoGrid } from "./BingoLogic.svelte";
-    import { range, sum } from "radashi";
+    import { range } from "radashi";
     import { bingo } from "./BingoLogic.svelte";
 
     let won = $state(false);
@@ -101,9 +101,9 @@
             <div
                 class="grid size-[clamp(--spacing(50),90dvw,--spacing(150))] grid-cols-5 grid-rows-5 gap-1 overflow-clip rounded-2xl bg-[#252525]"
             >
-                {#each range(bingo.rowCount - 1) as row}
+                {#each range(bingo.rowCount - 1) as row (row)}
                     <div class="row row-span-5 grid grid-cols-subgrid grid-rows-subgrid">
-                        {#each range(bingo.colCount - 1) as col}
+                        {#each range(bingo.colCount - 1) as col (col)}
                             <Cell {row} {col} />
                         {/each}
                     </div>

@@ -6,7 +6,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 export default defineConfig(() => ({
     server: {
         host: true,
-        allowedHosts:["xen"]
+        allowedHosts: ["xen"],
     },
     plugins: [tailwindcss(), sveltekit(), visualizer({})],
 }));
