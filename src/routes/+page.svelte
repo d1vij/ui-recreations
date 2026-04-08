@@ -6,7 +6,10 @@
         title: string;
         slug: ValidSlugs;
         out?: string;
-    }[] = [{ title: "Airtel Black", slug: "airtel-black", out: "https://airtelblack.com" }];
+    }[] = [
+        { title: "Airtel Black", slug: "airtel-black", out: "https://airtelblack.com" },
+        { title: "Fluid Navbar", slug: "fluid-navbar", out: "https://www.youtube.com/watch?v=S98uVU2CAl0" },
+    ];
 </script>
 
 <div
@@ -20,12 +23,12 @@
                     <a
                         class="hover-highlight text-lg"
                         href={resolve("/[id]", {
-                            id: "airtel-black",
+                            id: link.slug,
                         })}
                     >
                         {link.title}
                     </a>
-                    <p class="text-sm opacity-50">{link.out}</p>
+                    <p class="text-sm opacity-50 select-all">{link.out}</p>
                 </div>
             {/each}
         </nav>
