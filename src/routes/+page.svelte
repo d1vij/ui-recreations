@@ -8,7 +8,11 @@
         out?: string;
     }[] = [
         { title: "Airtel Black", slug: "airtel-black", out: "https://airtelblack.com" },
-        { title: "Fluid Navbar", slug: "fluid-navbar", out: "https://www.youtube.com/watch?v=S98uVU2CAl0" },
+        {
+            title: "Fluid Navbar",
+            slug: "fluid-navbar",
+            out: "https://www.youtube.com/watch?v=S98uVU2CAl0",
+        },
     ];
 </script>
 
@@ -17,7 +21,7 @@
 >
     <div class="max-w-200 space-y-8 text-center">
         <h1 class="text-5xl font-bold">UI Recreations in Svelte</h1>
-        <nav class="flex flex-wrap justify-center gap-2 font-playpen">
+        <nav class="flex max-w-200 flex-wrap justify-center gap-8 font-playpen">
             {#each links as link (link.title)}
                 <div class="flex flex-col items-center justify-center">
                     <a
