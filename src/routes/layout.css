@@ -10,6 +10,11 @@
     }
 }
 
+html,
+body {
+    @apply bg-stone-200;
+}
+
 *::selection {
     background-color: color(from var(--color-stone-500) srgb r g b / 20%);
 }

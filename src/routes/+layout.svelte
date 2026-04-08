@@ -27,6 +27,6 @@
     </nav>
 {/if}
 
-<main class={["absolute right-0 bottom-0 left-0", isRoot ? "top-0" : "top-13"]}>
+<main class={["absolute right-0 bottom-0 left-0 overflow-scroll", isRoot ? "top-0" : "top-13"]}>
     {@render children()}
 </main>
