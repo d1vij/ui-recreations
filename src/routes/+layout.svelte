@@ -1,6 +1,5 @@
 <script lang="ts">
     import "./layout.css";
-    import favicon from "$lib/assets/favicon.svg";
     import { resolve, base } from "$app/paths";
     import { page } from "$app/state";
 
@@ -9,8 +8,6 @@
 </script>
 
 <svelte:head>
-    <title>Recreating UIs in Svelte</title>
-    <link rel="icon" href={favicon} />
     <link
         href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap"
         rel="stylesheet"
