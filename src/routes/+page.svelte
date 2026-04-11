@@ -1,6 +1,5 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
-    import { links } from "$lib/links";
 </script>
 
 <svelte:head>
@@ -13,20 +12,39 @@
     <div class="space-y-8 text-center md:max-w-[80%]">
         <h1 class="text-5xl font-bold">UI Recreations in Svelte</h1>
         <nav class="flex max-w-200 flex-wrap justify-center gap-8 font-playpen">
-            {#each Object.keys(links) as slug (slug)}
-                {@const { title, out } = links[slug as keyof typeof links]}
-                <div class="flex flex-col items-center justify-center">
-                    <a
-                        class="hover-highlight text-lg"
-                        href={resolve("/[slug]", {
-                            slug: slug,
-                        })}
-                    >
-                        {title}
-                    </a>
-                    <p class="min-h-10 max-w-[30ch] text-sm opacity-50 select-all">{out}</p>
-                </div>
-            {/each}
+            <div class="link">
+                <a href={resolve("/airtel-black")}> Airtel Black</a>
+                <p>https://airtelblack.com</p>
+            </div>
+            <div class="link">
+                <a href={resolve("/fluid-navbar")}> Fluid Navbar</a>
+                <p>https://www.youtube.com/watch?v=S98uVU2CAl0</p>
+            </div>
+            <div class="link">
+                <a href={resolve("/minimal-sidebar")}> Minimal Sidebar</a>
+                <p>https://dribbble.com/shots/23883932-Minimal-sidebar-navigation-Untitled-UI</p>
+            </div>
+            <div class="link">
+                <a href={resolve("/profile-card")}> Profile Card </a>
+                <p>https://dribbble.com/shots/26033069-Profile-Card</p>
+            </div>
+            <!-- <div class="link">
+                <a href={resolve("/7guis")}> 7 Guis</a>
+                <p>https://eugenkiss.github.io/7guis/tasks</p>
+            </div> -->
         </nav>
     </div>
 </div>
+
+<style lang="postcss">
+    @reference "tailwindcss";
+    .link {
+        @apply flex flex-col items-center justify-center;
+        a {
+            @apply text-lg;
+        }
+        p {
+            @apply min-h-10 max-w-[30ch] text-sm opacity-50 select-all;
+        }
+    }
+</style>

@@ -9,7 +9,7 @@
 
 <script lang="ts">
     import HoverTitle from "./HoverTitle.svelte";
-    import { sidebarNode } from "./App.svelte";
+    import { sidebarNode } from "./+page.svelte";
 
     const { icon: Icon, hoverTitle }: SidebarIconProps = $props();
     const node = sidebarNode();

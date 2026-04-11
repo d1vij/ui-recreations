@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Label from "$lib/airtel-black/Label.svelte";
+    import Label from "./Label.svelte";
 
     const stats: { count: string; title: string }[] = [
         { count: "3", title: "srs generated" },

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { LabelProps } from "$lib/airtel-black/Label.svelte";
-    import Label from "$lib/airtel-black/Label.svelte";
+    import type { LabelProps } from "./Label.svelte";
+    import Label from "./Label.svelte";
 
     const cards: {
         emoji: string;

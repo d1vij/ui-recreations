@@ -1,10 +1,6 @@
 <script lang="ts">
     import "./layout.css";
-    import { resolve, base } from "$app/paths";
-    import { page } from "$app/state";
-
-    let { children } = $props();
-    let isRoot = $derived(page.url.pathname === base + "/");
+    const { children } = $props();
 </script>
 
 <svelte:head>
@@ -14,16 +10,4 @@
     />
 </svelte:head>
 
-{#if !isRoot}
-    <nav class="g-stone-200 h-13 bg-stone-200 p-3 pl-4 font-playpen text-stone-900">
-        <a
-            href={resolve("/")}
-            class="rounded-3xl bg-stone-400/50 p-1 px-2 shadow-xs shadow-stone-800/40 transition-all ease-in hover:shadow-sm"
-            >Go back</a
-        >
-    </nav>
-{/if}
-
-<main class={["absolute right-0 bottom-0 left-0 overflow-scroll", isRoot ? "top-0" : "top-13"]}>
-    {@render children()}
-</main>
+{@render children()}

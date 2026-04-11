@@ -2,7 +2,7 @@
     import { page } from "$app/state";
     import { resolve } from "$app/paths";
 
-    const slug = page.params.id;
+    const slug = page.url.pathname;
 </script>
 
 <div class="absolute inset-0 grid place-items-center">

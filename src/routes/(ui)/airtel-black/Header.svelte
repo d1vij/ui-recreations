@@ -33,8 +33,8 @@
             {@render NavButton("the-wall", "The Wall")}
             {@render NavButton("glossary", "Glossary")}
             {@render NavButton("FIQs", "FIQs")}
-            {@render NavButton("awards", "Awards")}
-            {@render NavButton("bingo", "Bingo")}
+            <!-- {@render NavButton("awards", "Awards")} -->
+            <!-- {@render NavButton("bingo", "Bingo")} -->
         </div>
 
         <button

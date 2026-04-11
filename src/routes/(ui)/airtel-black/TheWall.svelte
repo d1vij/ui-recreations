@@ -4,7 +4,7 @@
 
 <script lang="ts">
     import { title as titleCase } from "radashi";
-    import Label from "$lib/airtel-black/Label.svelte";
+    import Label from "./Label.svelte";
 </script>
 
 {#snippet TestimonyCard(title: string, body: string, device: string, stars: number)}

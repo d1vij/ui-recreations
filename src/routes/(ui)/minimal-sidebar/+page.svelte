@@ -8,10 +8,8 @@
 
     import SidebarIcon from "./SidebarIcon.svelte";
     import HoverTitle from "./HoverTitle.svelte";
-    import { fade } from "svelte/transition";
 
     let theme = $state<"light" | "dark">("light");
-
     let open = $state(false);
     // open = true;
 

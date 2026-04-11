@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Label, { type LabelProps } from "$lib/airtel-black/Label.svelte";
+    import Label, { type LabelProps } from "./Label.svelte";
 
     type Labels = { color: NonNullable<LabelProps["color"]>; content: string }[];
 
