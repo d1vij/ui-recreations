@@ -11,6 +11,10 @@
     import FIQ from "./FIQ.svelte";
 </script>
 
+<svelte:head>
+    <title>Airtel Blackout</title>
+</svelte:head>
+
 <div class="text-white/50">
     <Header />
     <Hero />

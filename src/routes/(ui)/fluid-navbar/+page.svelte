@@ -2,6 +2,10 @@
     let activeIdx = $state(0);
 </script>
 
+<svelte:head>
+    <title>Fluid Navbar</title>
+</svelte:head>
+
 <!-- background -->
 <div class="absolute inset-0 grid place-items-center overflow-clip bg-[#101010]">
     <div class="mt-5">

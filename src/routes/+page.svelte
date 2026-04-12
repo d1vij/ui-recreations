@@ -28,10 +28,10 @@
                 <a href={resolve("/profile-card")}> Profile Card </a>
                 <p>https://dribbble.com/shots/26033069-Profile-Card</p>
             </div>
-            <!-- <div class="link">
+            <div class="link">
                 <a href={resolve("/7guis")}> 7 Guis</a>
                 <p>https://eugenkiss.github.io/7guis/tasks</p>
-            </div> -->
+            </div>
         </nav>
     </div>
 </div>

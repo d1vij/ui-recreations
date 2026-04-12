@@ -16,6 +16,9 @@
     const sidebarToggleNode = sidebarNode();
 </script>
 
+<svelte:head>
+    <title>Minimal Responsive Sidebar</title>
+</svelte:head>
 <main class={["absolute inset-0 bg-[#a9a5a6]", theme]}>
     <!-- theme toggler -->
     <div class="absolute top-2 right-2">
