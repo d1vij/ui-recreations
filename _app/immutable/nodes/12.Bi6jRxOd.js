@@ -1,0 +1,1 @@
+import"../chunks/Oe8ClqgB.js";import{e as o,$ as e}from"../chunks/BOtD02zt.js";import{h as r}from"../chunks/ypZgAY7l.js";function c(t){r("rgxex4",a=>{o(()=>{e.title="7guis | Timer"})})}export{c as component};
