@@ -24,7 +24,7 @@
         "eslint": "^10.2.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-svelte": "^3.17.0",
-        "globals": "^17.4.0",
+        "globals": "^17.5.0",
         "prettier": "^3.8.2",
         "prettier-plugin-svelte": "^3.5.1",
         "prettier-plugin-tailwindcss": "^0.7.2",
@@ -38,7 +38,7 @@
         "@sveltejs/enhanced-img": "^0.10.4"
     },
     "dependencies": {
-        "@d1vij/shit-i-always-use": "^0.1.19",
+        "@d1vij/shit-i-always-use": "^0.1.21",
         "@lucide/svelte": "^1.8.0",
         "nanoid": "^5.1.7",
         "radashi": "^12.7.2",

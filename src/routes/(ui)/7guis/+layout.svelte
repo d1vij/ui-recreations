@@ -1,9 +1,10 @@
 <script lang="ts">
-    // import sharedStyles from "./7guis.module.css";
-    import uiInfo from "./ui-info";
     import type { Pathname } from "$app/types";
     import { resolve } from "$app/paths";
     import { page } from "$app/state";
+
+    import { vibrateOnClick } from "@d1vij/shit-i-always-use/svelte";
+    import uiInfo from "./ui-info";
 
     const { children } = $props();
 
@@ -53,7 +54,11 @@
                                 : "shadow-transparent outline-transparent hover:bg-mauve-600/20",
                         ]}
                     >
-                        <a href={resolve(path)} class={["size-full p-2"]}>
+                        <a
+                            class={["size-full p-2"]}
+                            href={resolve(path)}
+                            {@attach vibrateOnClick([15, 100, 15])}
+                        >
                             <span class="md:text-lg">
                                 {title}
                             </span>

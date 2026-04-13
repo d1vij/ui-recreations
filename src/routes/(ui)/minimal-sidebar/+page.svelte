@@ -109,8 +109,3 @@
         </article>
     </div>
 </main>
-
-<style lang="postcss">
-    @import "tailwindcss";
-    @custom-variant dark (&:where(.dark, .dark *));
-</style>

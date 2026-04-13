@@ -5,9 +5,9 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { enhancedImages } from "@sveltejs/enhanced-img";
 
 export default defineConfig(() => ({
-    server: {
-        host: true,
-        allowedHosts: ["xen"],
-    },
-    plugins: [tailwindcss(), enhancedImages(), sveltekit(), visualizer({})],
+	server: {
+		host: true,
+		allowedHosts: ["xen"],
+	},
+	plugins: [visualizer({}), tailwindcss(), enhancedImages(), sveltekit()],
 }));

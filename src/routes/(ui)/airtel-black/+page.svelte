@@ -1,5 +1,4 @@
 <script lang="ts">
-    import "./app.css";
     import Hero from "./Hero.svelte";
     import Header from "./Header.svelte";
     import Services from "./Services.svelte";
