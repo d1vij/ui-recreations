@@ -14,7 +14,7 @@
     <button
         onclick={handleClick}
         type="button"
-        class="base-container cursor-pointer bg-mauve-500/50 p-2 transition-all duration-100 hover:shadow! active:shadow!"
+        class="base-container transform-gpu cursor-pointer bg-mauve-300 p-2 transition-all duration-100 hover:shadow! active:scale-98 active:shadow-xs! md:active:shadow!"
     >
         Increment
     </button>

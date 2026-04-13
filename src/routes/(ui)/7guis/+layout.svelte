@@ -33,7 +33,7 @@
     class={[
         "custom-font",
         "absolute inset-0 bg-mauve-200 text-mauve-900",
-        "grid grid-rows-[auto_1fr] space-y-2 space-x-2 p-4 md:grid-cols-[auto_1fr] md:grid-rows-1 md:p-6",
+        "grid grid-rows-[auto_1fr] space-y-2 space-x-2 p-4 pt-0 md:grid-cols-[auto_1fr] md:grid-rows-1 md:p-6 md:pt-0",
     ]}
 >
     <aside
