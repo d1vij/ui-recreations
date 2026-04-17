@@ -21,13 +21,21 @@
         <h1 class="mb-20 text-5xl font-bold">UI Recreations in Svelte</h1>
         <nav class="nav">
             {@render Link("/airtel-black", "Airtel Black", "https://airtelblack.com")}
-            {@render Link("/fluid-navbar", "Fluid Navbar", "https://www.youtube.com/watch?v=S98uVU2CAl0")}
-            {@render Link("/minimal-sidebar", "Minimal Sidebar", "https://dribbble.com/shots/23883932-Minimal-sidebar-navigation-Untitled-UI")}
+            {@render Link(
+                "/fluid-navbar",
+                "Fluid Navbar",
+                "https://www.youtube.com/watch?v=S98uVU2CAl0"
+            )}
+            {@render Link(
+                "/minimal-sidebar",
+                "Minimal Sidebar",
+                "https://dribbble.com/shots/23883932-Minimal-sidebar-navigation-Untitled-UI"
+            )}
             {@render Link("/profile-card", "Profile Card", "https://airtelblack.com")}
             {@render Link("/7guis", "7guis", "https://eugenkiss.github.io/7guis/tasks")}
             {@render Link("/components", "Components", "")}
+            {@render Link("/youtube-notes", "Youtube Notes", "https://instadeq.com/youtube-notes/")}
         </nav>
-
     </div>
 </div>
 
