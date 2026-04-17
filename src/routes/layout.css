@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./(ui)/airtel-black/app.css";
+@import "./(uis)/airtel-black/app.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 @theme {
