@@ -1,0 +1,1 @@
+.example.svelte-c7c8d6{place-items:center;gap:calc(var(--spacing,.25rem) * 4);grid-template-columns:repeat(1,minmax(0,1fr));width:100%;display:grid}@media(min-width:48rem){.example.svelte-c7c8d6{grid-template-columns:repeat(2,minmax(0,1fr))}}

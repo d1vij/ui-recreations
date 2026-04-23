@@ -1,1 +1,0 @@
-import"../chunks/Oe8ClqgB.js";import{e as o,$ as t}from"../chunks/BOtD02zt.js";import{h as e}from"../chunks/ypZgAY7l.js";function p(r){e("bhfp6m",a=>{o(()=>{t.title="7guis | Flight Booker"})})}export{p as component};

@@ -1,0 +1,1 @@
+import"../chunks/BOR2wWpv.js";import{e as o,$ as e}from"../chunks/DNz8WHEx.js";import{h as t}from"../chunks/VVCkO3oL.js";function c(r){t("16zqh83",a=>{o(()=>{e.title="7guis | Timer"})})}export{c as component};
