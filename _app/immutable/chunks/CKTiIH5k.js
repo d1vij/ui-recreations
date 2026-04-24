@@ -1,0 +1,1 @@
+import{ae as c,g as i,B as n,D as f,af as a,a8 as u,a4 as o}from"./DKdR_X-0.js";function m(s){let e=0,r=o(0),t;return()=>{c()&&(i(r),n(()=>(e===0&&(t=f(()=>s(()=>a(r)))),e+=1,()=>{u(()=>{e-=1,e===0&&(t?.(),t=void 0,a(r))})})))}}export{m as c};

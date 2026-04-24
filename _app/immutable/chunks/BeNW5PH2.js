@@ -1,1 +1,0 @@
-import{ae as c,W as i,x as n,y as f,af as a,a9 as u,a5 as o}from"./DNz8WHEx.js";function m(s){let e=0,r=o(0),t;return()=>{c()&&(i(r),n(()=>(e===0&&(t=f(()=>s(()=>a(r)))),e+=1,()=>{u(()=>{e-=1,e===0&&(t?.(),t=void 0,a(r))})})))}}export{m as c};

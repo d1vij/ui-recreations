@@ -1,0 +1,1 @@
+import"../chunks/BOR2wWpv.js";import{h as o,$ as r}from"../chunks/DKdR_X-0.js";import{h as e}from"../chunks/C4X6XIkH.js";function n(t){e("rdvlem",a=>{o(()=>{r.title="7guis | Circle Drawer"})})}export{n as component};

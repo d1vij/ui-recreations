@@ -1,0 +1,1 @@
+import{v as f,i as u,w as o,x as _,j as t,C as g,y as i,q as l,o as d,u as p,z as v}from"./DKdR_X-0.js";function C(n,r){let s=null,y=t;var a;if(t){s=p;for(var e=v(document.head);e!==null&&(e.nodeType!==g||e.data!==n);)e=i(e);if(e===null)l(!1);else{var E=i(e);e.remove(),d(E)}}t||(a=document.head.appendChild(f()));try{u(()=>r(a),o|_)}finally{y&&(l(!0),d(s))}}export{C as h};

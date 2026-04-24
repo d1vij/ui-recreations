@@ -1,1 +1,0 @@
-import"./Cvo95vaf.js";import{an as e,W as s,am as a}from"./DNz8WHEx.js";class r{#t=e();get state(){return s(this.#t)}set state(t){a(this.#t,t,!0)}constructor(t){this.state=t}get(){return this.state}set(t){this.state=t}}const c=new r(document.title);export{c as D};

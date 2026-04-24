@@ -1,0 +1,1 @@
+import"../chunks/BOR2wWpv.js";import{h as o,$ as e}from"../chunks/DKdR_X-0.js";import{h as t}from"../chunks/C4X6XIkH.js";function c(a){t("1avleie",r=>{o(()=>{e.title="7guis | CRUD"})})}export{c as component};
