@@ -20,7 +20,7 @@
             <h1 class="font-black tracking-tighter text-white">Your issue has been</h1>
             <span class="text-nowrap"
                 ><span class="text-white/50 line-through">resolved</span>
-                <span class="text-airtel-red font-black">ignored.</span></span
+                <span class="font-black text-airtel-red">ignored.</span></span
             >
         </div>
         <p class="max-w-150 text-sm md:text-xl">
@@ -32,7 +32,7 @@
         <div class="flex w-full flex-wrap justify-center gap-12 md:flex-nowrap">
             {#each stats as { count, title } (title)}
                 <div class="grid">
-                    <div class="text-airtel-red text-3xl font-black md:text-6xl">
+                    <div class="text-3xl font-black text-airtel-red md:text-6xl">
                         {count}
                     </div>
                     <div class="w-[16ch] text-center text-sm uppercase md:text-sm">

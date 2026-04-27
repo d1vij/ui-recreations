@@ -5,18 +5,18 @@
 {#snippet NavButton(to: string, title: string)}
     <a
         href={resolve(`/airtel-black#${to}`)}
-        class="hover:text-airtel-red grid place-items-center text-sm font-bold transition-colors"
+        class="grid place-items-center text-sm font-bold transition-colors hover:text-airtel-red"
         >{title}</a
     >
 {/snippet}
 
 <header
-    class="bg-airtel-black sticky top-0 z-200 flex h-15 w-full items-center justify-between gap-4 px-8"
+    class="sticky top-0 z-200 flex h-15 w-full items-center justify-between gap-4 bg-airtel-black px-8"
 >
     <!-- Logo -->
     <div class="flex flex-nowrap items-center justify-center gap-2">
         <!-- Blinking Light -->
-        <div class="light bg-airtel-red size-2.5 rounded-4xl"></div>
+        <div class="light size-2.5 rounded-4xl bg-airtel-red"></div>
         <div class="text-2xl font-black tracking-tighter">
             <span class="text-white">airtel</span>
             <span class="text-airtel-red">
@@ -40,7 +40,7 @@
         <button
             class={[
                 "size-fit cursor-pointer rounded-3xl border border-white/25 p-2 px-3 text-sm",
-                "hover:border-airtel-red font-semibold transition-all duration-300 hover:text-white",
+                "font-semibold transition-all duration-300 hover:border-airtel-red hover:text-white",
             ]}
         >
             ▸ Tune

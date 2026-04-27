@@ -87,7 +87,7 @@
 
 <section id="case-study" class={["p-25 px-8", "bg-airtel-black"]}>
     <div class="mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">case study</h2>
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">case study</h2>
         <div
             class="mx-auto mt-4 mb-5 flex w-full max-w-140 flex-col items-center gap-6 text-center text-white"
         >
@@ -114,9 +114,9 @@
     <div class="mt-8 space-y-4">
         {#if won}
             <div
-                class="bg-airtel-red/10 border-airtel-red/30 space-y-2 rounded-2xl border p-6 text-center"
+                class="space-y-2 rounded-2xl border border-airtel-red/30 bg-airtel-red/10 p-6 text-center"
             >
-                <h1 class="text-airtel-red text-2xl font-black">🎉 BINGO!</h1>
+                <h1 class="text-2xl font-black text-airtel-red">🎉 BINGO!</h1>
                 <p class="text-sm text-white/70">
                     Congratulations! Your prize is the same as Airtel's resolution: absolutely
                     nothing. But at least this game was honest about it.

@@ -23,7 +23,7 @@
 
 <section id="FIQs" class={["p-25 px-8", "bg-airtel-black"]}>
     <div class="mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">
             frequently asked questions
         </h2>
         <div

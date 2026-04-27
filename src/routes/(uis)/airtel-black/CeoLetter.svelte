@@ -14,7 +14,7 @@
                 "rounded-2xl border border-[#2e2e2e] bg-[#212121] p-10 ",
             ]}
         >
-            <p class="text-airtel-red/20 absolute -top-2 left-5 text-8xl">"</p>
+            <p class="absolute -top-2 left-5 text-8xl text-airtel-red/20">"</p>
 
             <!-- letter body -->
             <div class="pt-4 text-white/65">

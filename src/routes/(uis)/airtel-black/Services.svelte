@@ -54,9 +54,9 @@
     ];
 </script>
 
-<section id="services" class="bg-airtel-black min-h-dvh">
+<section id="services" class="min-h-dvh bg-airtel-black">
     <div class="mx-auto max-w-280 p-20 px-8">
-        <h1 class="text-airtel-red mb-4 text-sm font-bold uppercase">what we offer</h1>
+        <h1 class="mb-4 text-sm font-bold text-airtel-red uppercase">what we offer</h1>
         <div class="mb-5 text-4xl font-black text-white lg:text-5xl">
             <span>Premium Services,</span>
             <br />
@@ -73,7 +73,7 @@
             {#each cards as { body, color, emoji, labelText, title } (title)}
                 <div
                     class={[
-                        "hover:border-airtel-red/40 hover:bg-airtel-red/10 rounded-2xl border border-[#2e2e2e] bg-[#212121]",
+                        "rounded-2xl border border-[#2e2e2e] bg-[#212121] hover:border-airtel-red/40 hover:bg-airtel-red/10",
                         "space-y-3 p-7",
                     ]}
                 >
@@ -90,7 +90,7 @@
         </div>
     </div>
 </section>
-<section class="bg-airtel-red min-h-60 p-16 text-center">
+<section class="min-h-60 bg-airtel-red p-16 text-center">
     <div class="text-3xl text-white">
         <p>"I admire the optimism.</p>
         <p>Unfortunately, <span class="text-airtel-red">optimism does not route packets.</span>"</p>

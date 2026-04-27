@@ -52,7 +52,7 @@
             {#each Array(6)}
                 {#each cards as { body, subtitle, title } (title)}
                     <div class={["card", "space-y-1 border-r border-b border-white/10 p-8"]}>
-                        <h1 class="text-airtel-red font-semibold">"{title}"</h1>
+                        <h1 class="font-semibold text-airtel-red">"{title}"</h1>
                         <h2 class="text-xs italic opacity-40">{subtitle}</h2>
                         <p class="opacity-80">{body}</p>
                     </div>
@@ -61,7 +61,7 @@
         </div>
     </div>
 </section>
-<section class="bg-airtel-red flex flex-col items-center justify-center p-16 text-white">
+<section class="flex flex-col items-center justify-center bg-airtel-red p-16 text-white">
     <h1 class="text-8xl font-black">{dayCounter}</h1>
     <h2 class="text-xl opacity-80">
         days since Airtel last "resolved" an issue that was actually fixed

@@ -1,3 +1,1 @@
-export function toggle(state: boolean) {
-    
-}
+export function toggle(state: boolean) {}

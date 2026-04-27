@@ -8,14 +8,14 @@
 </script>
 
 {#snippet TestimonyCard(title: string, body: string, device: string, stars: number)}
-    <div class="border-airtel-red space-y-4 rounded-xl border-l-4 bg-white p-7 shadow-xs">
-        <h1 class="text-airtel-red text-sm font-semibold uppercase">{title}</h1>
+    <div class="space-y-4 rounded-xl border-l-4 border-airtel-red bg-white p-7 shadow-xs">
+        <h1 class="text-sm font-semibold text-airtel-red uppercase">{title}</h1>
         <p>"{body}"</p>
         <div class="flex justify-between text-xs">
             <span class="font-medium text-[#9E9E9E]">
                 {titleCase(device)} Customer
             </span>
-            <span class="text-airtel-red flex font-black">
+            <span class="flex font-black text-airtel-red">
                 {#if stars > MAX_STARS}
                     INVALID STAR COUNT
                 {:else}
@@ -32,9 +32,9 @@
     </div>
 {/snippet}
 
-<section id="the-wall" class={["p-25 px-8", "text-airtel-black bg-[#f5f5f5]"]}>
+<section id="the-wall" class={["p-25 px-8", "bg-[#f5f5f5] text-airtel-black"]}>
     <div class="mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">
             the wall of fame
         </h2>
         <div class="mt-4 mb-5 text-4xl font-black">
@@ -107,7 +107,7 @@
 </section>
 
 {#snippet ReviewCard(body: string, user: string, description: string)}
-    <div class="text-airtel-black rounded-2xl bg-white p-4 pr-4 pl-7">
+    <div class="rounded-2xl bg-white p-4 pr-4 pl-7 text-airtel-black">
         <div class="mb-4">
             <Label color="red" class="ml-auto pt-0.5! pb-0.5! text-[10px] font-bold!"
                 >verified sufferer</Label
@@ -124,7 +124,7 @@
 
 <section class="bg-airtel-black p-25 px-8">
     <div class="mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">customer love</h2>
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">customer love</h2>
         <div class="mt-4 mb-5 text-4xl font-black text-white">
             <h1>★★★★★ Reviews</h1>
             <h1>Airtel Wishes Were Real.</h1>
@@ -170,8 +170,8 @@
 </section>
 
 <section class="p-25 px-8">
-    <div class="text-airtel-black mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">customer love</h2>
+    <div class="mx-auto max-w-275 text-airtel-black">
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">customer love</h2>
         <div class="mt-4 mb-5 text-4xl font-black">
             <h1>Airtel: What You Pay For</h1>
             <h1>vs. What You Get.</h1>
@@ -182,7 +182,7 @@
 
         <table class="feat-table mt-4 w-full overflow-clip rounded-2xl">
             <thead class="">
-                <tr class="bg-airtel-red overflow-clip text-sm text-white uppercase">
+                <tr class="overflow-clip bg-airtel-red text-sm text-white uppercase">
                     <th class=""> feature </th>
                     <th> what you're promised </th>
                     <th> what you actually get </th>

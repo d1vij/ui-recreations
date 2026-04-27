@@ -66,12 +66,12 @@
 
 <section id="case-study" class={["p-25 px-8", "text-airtel-black"]}>
     <div class="mx-auto max-w-275">
-        <h2 class="text-airtel-red text-sm font-black tracking-widest uppercase">case study</h2>
+        <h2 class="text-sm font-black tracking-widest text-airtel-red uppercase">case study</h2>
         <div class="mt-4 mb-5 text-4xl font-black">
             <h1>Anatomy of a</h1>
             <h1>"Resolved" Issue.</h1>
         </div>
-        <p class="text-airtel-black max-w-140 text-lg font-light">
+        <p class="max-w-140 text-lg font-light text-airtel-black">
             A real timeline of a static IP + bridge mode outage. Three service requests. Three
             "resolutions." Zero fixes. All verifiable.
         </p>
@@ -80,7 +80,7 @@
         <div class="timeline mt-8 min-h-dvh space-y-12 p-4 pl-2">
             {#each timelineItems as { body, date, labels, resolved, title } (title)}
                 <div class={["timeline-item space-y-1 pl-9", resolved ? "resolved" : "unresolved"]}>
-                    <h2 class="text-airtel-red text-sm font-bold">{date}</h2>
+                    <h2 class="text-sm font-bold text-airtel-red">{date}</h2>
                     <h1 class="text-lg font-bold">{title}</h1>
                     <p>
                         {body}

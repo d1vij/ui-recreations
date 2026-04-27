@@ -21,7 +21,7 @@
 <div class="base-container relative bg-mauve-400" style:anchor-name="--flight-booker">
     <select
         bind:value={direction}
-        class="cursor-pointer w-full rounded bg-mauve-300 p-2 shadow shadow-mauve-800/20"
+        class="w-full cursor-pointer rounded bg-mauve-300 p-2 shadow shadow-mauve-800/20"
     >
         <option value="one-way">One-Way Flight</option>
         <option value="two-way">Return Flight</option>
