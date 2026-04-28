@@ -39,7 +39,7 @@
     ]}
 >
     <aside
-        class="relative grid h-[35dvh] w-full grid-rows-[auto_1fr] overflow-scroll rounded-md bg-mauve-400 shadow shadow-mauve-900/40 md:h-full md:w-70 md:grid-cols-1 md:overflow-hidden"
+        class="relative grid h-[35dvh] w-full grid-rows-[auto_1fr] rounded-md bg-mauve-400 shadow shadow-mauve-900/40 md:h-full md:w-70 md:grid-cols-1 md:overflow-hidden"
     >
         <nav class="">
             <ul class="space-y-1 p-2">
@@ -70,7 +70,7 @@
             <hr class="mx-auto mt-2 w-[90%] rounded-full border-mauve-600/20" />
         </nav>
 
-        <div class="grow scroll-smooth p-4 text-sm text-mauve-700 md:overflow-scroll">
+        <div class="grow scroll-smooth p-4 text-sm text-mauve-700">
             <p>
                 {info}
             </p>

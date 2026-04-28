@@ -274,7 +274,7 @@
         <hr class="divider" />
         <!-- Can we assume small screens wont have a keyboard ?? so no keyboard action display for them, but the actions would work -->
         {#if isMedium.current}
-            <div class={["flex gap-4 overflow-scroll text-xs", "keybinds"]}>
+            <div class={["flex gap-4 text-xs", "keybinds"]}>
                 {#snippet Keybind(label: string, keys: string[])}
                     <div class="flex flex-col">
                         <span class="text-zinc-700">{label}</span>

@@ -1,41 +1,33 @@
 <script lang="ts">
     import { resolve } from "$app/paths";
     import type { Pathname } from "$app/types";
-    import { slide } from "svelte/transition";
 
+    import { onClickOutsideAttachment, vibrateOnClick } from "@d1vij/shit-i-always-use/svelte";
     import { DocumentTitle } from "./Contexts.svelte";
-    import { sineOut } from "svelte/easing";
+    import { onNavigate } from "$app/navigation";
     const { children } = $props();
 
-    let sidebarOpen = $state(false);
+    let menuOpen = $state(false);
+
     DocumentTitle.set("Home");
+    onNavigate(() => {
+        menuOpen = false;
+    });
 </script>
 
 <svelte:head>
     <title>Components | {DocumentTitle.get()}</title>
 </svelte:head>
 
-<svelte:body
-    onclick={(e) => {
-        const target = e.target as HTMLElement;
-        if (!target.closest(".sidebar-interest")) {
-            sidebarOpen = false;
-        }
-    }}
-/>
-
-<div data-sveltekit-replacestate class={["bg-teal-100", "absolute inset-0"]}>
-    {#if sidebarOpen}
-        <div class="sidebar-interest absolute top-0 w-full px-10">
-            <aside
-                in:slide={{ axis: "y", duration: 300, delay: 300, easing: sineOut }}
-                out:slide={{ axis: "y", duration: 500, easing: sineOut }}
-                class={[
-                    "min-h-[50dvh] w-full bg-teal-500",
-                    "shadow shadow-teal-950/40",
-                    "rounded-b-4xl",
-                ]}
-            >
+<div class={["bg-taupe-800", "absolute inset-0 overflow-clip"]}>
+    <aside
+        class={["menu", menuOpen && "open", "absolute flex  max-h-[80dvh] min-h-[50dvh]"]}
+        {@attach onClickOutsideAttachment(() => {
+            menuOpen = false;
+        })}
+    >
+        <div class={["background", "grow bg-taupe-500", "flex rounded-b p-1 pt-0", ""]}>
+            <div class="content relative grow rounded-b bg-taupe-300 p-2 text-taupe-800">
                 {#snippet Link(href: Pathname, title: string)}
                     <a href={resolve(href)} type="button">
                         {title}
@@ -44,23 +36,149 @@
                 <nav>
                     {@render Link("/components/Sample", "Sample")}
                 </nav>
-            </aside>
+            </div>
         </div>
-    {:else}
-        <!-- sidebar toggle -->
         <button
-            in:slide={{ axis: "y", delay: 500, duration: 100, easing: sineOut }}
-            out:slide={{ axis: "y", duration: 300, easing: sineOut }}
             class={[
-                "sidebar-interest toggle-button",
-                "absolute top-0 left-10 cursor-pointer rounded-b-lg bg-teal-500 px-4 py-1 hover:brightness-80",
+                "menu-toggle",
+                "group -z-10 w-10 cursor-grab active:cursor-grabbing",
+                "absolute top-full right-0 md:right-8",
             ]}
-            onclick={() => (sidebarOpen = !sidebarOpen)}>{DocumentTitle.get()}</button
+            onclick={() => (menuOpen = !menuOpen)}
+            title="Toggle Menu"
+            {@attach vibrateOnClick([100, 200, 100])}
         >
-    {/if}
+            <!-- thread -->
+            <div
+                class={[
+                    "thread",
+                    "h-25 w-2 rounded-b-sm bg-stone-200 md:h-40",
+                    "border border-taupe-700/50 shadow-xs shadow-taupe-900/40",
+                ]}
+            ></div>
+            <!-- bob -->
+            <div
+                class={[
+                    "absolute bottom-5 h-8 w-4 translate-y-3 rounded",
+                    "bg-linear-to-r from-taupe-400 to-taupe-500 shadow shadow-taupe-800/10",
+                ]}
+            ></div>
+        </button>
+    </aside>
+
+    <main
+        class={[
+            "font-[Gloock]",
+            "absolute inset-x-5 inset-y-10 rounded  p-8 md:inset-y-20",
+            "flex flex-col",
+            "overflow-x-hidden overflow-y-auto border-4 border-taupe-300 bg-taupe-200 shadow-sm shadow-taupe-100/50",
+        ]}
+    >
+        {@render children()}
+    </main>
 </div>
 
-{@render children()}
-
 <style lang="postcss">
+    @reference "tailwindcss";
+
+    @import "./fonts.css";
+
+    @keyframes ribbonAnimation {
+        20% {
+            transform: translateY(20%);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+    .menu {
+        position: relative;
+        z-index: 10;
+        --gap: 10;
+        width: calc(100% - --spacing(2 * var(--gap)));
+        left: --spacing(var(--gap));
+
+        .background,
+        .content {
+            --mask:
+                radial-gradient(44.72px at 50% calc(100% - 60px), #000 99%, #0000 101%)
+                    calc(50% - 40px) 0/80px 100%,
+                radial-gradient(44.72px at 50% calc(100% + 40px), #0000 99%, #000 101%) 50%
+                    calc(100% - 20px)/80px 100% repeat-x;
+            -webkit-mask: var(--mask);
+            mask: var(--mask);
+        }
+
+        transform: translateY(-85%);
+        --timing-fn: linear(
+            0,
+            0.013 1%,
+            0.051 2.2%,
+            0.404 9.8%,
+            0.51 12.6%,
+            0.602 15.5%,
+            0.683 18.7%,
+            0.754 22.2%,
+            0.813 26%,
+            0.861 30.2%,
+            0.9 34.8%,
+            0.931 40%,
+            0.972 52.7%,
+            0.992 70.2%,
+            1
+        );
+        transition: transform 500ms var(--timing-fn);
+        &.open {
+            transform: translateY(0);
+        }
+    }
+
+    .menu-toggle {
+        @apply flex flex-col items-center;
+
+        .thread {
+            background: repeating-linear-gradient(
+                45deg,
+                var(--color-taupe-200),
+                var(--color-taupe-200) 2px,
+                var(--color-taupe-600) 2px,
+                var(--color-taupe-800) 4px
+            );
+        }
+
+        --timing-fn: linear(
+            0,
+            0.012 0.6%,
+            0.045 1.2%,
+            0.179 2.5%,
+            0.896 7%,
+            1.131 8.8%,
+            1.274 10.5%,
+            1.317 11.4%,
+            1.337 12.3%,
+            1.332 13.6%,
+            1.29 15%,
+            1.033 19.8%,
+            0.95 21.7%,
+            0.906 23.3%,
+            0.886 25%,
+            0.897 27.4%,
+            1.01 33.9%,
+            1.03 35.8%,
+            1.039 37.7%,
+            1.035 40.1%,
+            0.997 46.6%,
+            0.987 50.4%,
+            1.004 63%,
+            1
+        );
+
+        transition: translate 1.5s var(--timing-fn);
+        @apply translate-y-[-50%] hover:translate-y-[-45%] active:translate-y-[-30%];
+    }
+
+    .menu.open ~ .menu-toggle {
+        @apply translate-y-[-80%] hover:translate-y-[-70%] active:translate-y-[-55%];
+    }
 </style>

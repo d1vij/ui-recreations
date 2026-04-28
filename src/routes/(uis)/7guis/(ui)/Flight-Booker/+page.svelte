@@ -2,7 +2,6 @@
     import { SvelteDate } from "svelte/reactivity";
 
     import DatePicker from "./DatePicker.svelte";
-    import { onMount } from "svelte";
     import { onClickOutsideAttachment } from "@d1vij/shit-i-always-use/svelte";
     let direction = $state<"one-way" | "two-way">("one-way");
 

@@ -2,6 +2,7 @@
 @import "./(uis)/airtel-black/app.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --font-playpen: "Playpen Sans";
 }
@@ -19,4 +20,9 @@ body {
 
 *::selection {
     background-color: color(from var(--color-stone-500) srgb r g b / 20%);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-gutter: none;
 }

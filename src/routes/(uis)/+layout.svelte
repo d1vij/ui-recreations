@@ -12,6 +12,6 @@
     >
 </nav>
 
-<main class={["absolute top-13 right-0 bottom-0 left-0 overflow-scroll"]}>
+<main class={["absolute top-13 right-0 bottom-0 left-0"]}>
     {@render children?.()}
 </main>
