@@ -1,0 +1,1 @@
+import"../chunks/NBTf-wEX.js";import{e as o,$ as e}from"../chunks/CDW0zyB4.js";import{h as t}from"../chunks/CwvB9F8y.js";function i(a){t("19xj8k3",r=>{o(()=>{e.title="7guis | Cells"})})}export{i as component};
