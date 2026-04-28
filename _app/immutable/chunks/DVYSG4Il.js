@@ -1,0 +1,1 @@
+import"./BrBPY_B_.js";import{p as a,a as r}from"./D_ZeT3DL.js";import{a as p,f as m}from"./DNtsOfsJ.js";import{D as i}from"./BqBJ2Mgj.js";var s=m("<div>Sample</div>");function f(o,e){a(e,!0),i.set("S");var t=s();p(o,t),r()}const d=Object.freeze(Object.defineProperty({__proto__:null,default:f},Symbol.toStringTag,{value:"Module"}));export{f as _,d as a};

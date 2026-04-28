@@ -1,1 +1,0 @@
-import"../chunks/BOR2wWpv.js";import{h as o,$ as t}from"../chunks/DKdR_X-0.js";import{h as e}from"../chunks/C4X6XIkH.js";function i(a){e("19xj8k3",r=>{o(()=>{t.title="7guis | Cells"})})}export{i as component};

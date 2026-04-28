@@ -1,0 +1,1 @@
+import{ak as e,Z as s,aj as a}from"./D_ZeT3DL.js";class r{#t=e();get state(){return s(this.#t)}set state(t){a(this.#t,t,!0)}constructor(t){this.state=t}get(){return this.state}set(t){this.state=t}}const n=new r(document.title);export{n as D};
