@@ -48,7 +48,7 @@
             @apply text-xl;
         }
         p {
-            @apply min-h-10  text-[10px] mx-auto opacity-50 select-all;
+            @apply mx-auto min-h-10 text-[10px] opacity-50 select-all;
         }
     }
 </style>

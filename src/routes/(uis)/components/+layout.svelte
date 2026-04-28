@@ -4,7 +4,10 @@
 
     import { onClickOutsideAttachment, vibrateOnClick } from "@d1vij/shit-i-always-use/svelte";
     import { DocumentTitle } from "./Contexts.svelte";
+    import { endpoints } from "./endpoints";
     import { onNavigate } from "$app/navigation";
+    import { range } from "@d1vij/shit-i-always-use";
+    import { title } from "radashi";
     const { children } = $props();
 
     let menuOpen = $state(false);
@@ -21,21 +24,30 @@
 
 <div class={["bg-taupe-800", "absolute inset-0 overflow-clip"]}>
     <aside
-        class={["menu", menuOpen && "open", "absolute flex  max-h-[80dvh] min-h-[50dvh]"]}
+        class={["menu", menuOpen && "open", "absolute flex  max-h-[80dvh]"]}
         {@attach onClickOutsideAttachment(() => {
             menuOpen = false;
         })}
     >
         <div class={["background", "grow bg-taupe-500", "flex rounded-b p-1 pt-0", ""]}>
             <div class="content relative grow rounded-b bg-taupe-300 p-2 text-taupe-800">
-                {#snippet Link(href: Pathname, title: string)}
-                    <a href={resolve(href)} type="button">
-                        {title}
-                    </a>
-                {/snippet}
-                <nav>
-                    {@render Link("/components/Sample", "Sample")}
+                <nav
+                    class="grid grid-cols-2 gap-2 p-4 pt-6 font-[Gloock] md:grid-cols-3 md:text-lg"
+                >
+                    {#each range(10)}
+                        {#each endpoints as e (e)}
+                            <span class={[""]}>
+                                <a
+                                    href={resolve(`/(uis)/components/(comps)/${e}` as Pathname)}
+                                    class=""
+                                >
+                                    {title(e)}
+                                </a>
+                            </span>
+                        {/each}
+                    {/each}
                 </nav>
+                <div class="h-15 w-full"></div>
             </div>
         </div>
         <button
@@ -70,7 +82,7 @@
         class={[
             "font-[Gloock]",
             "absolute inset-x-5 inset-y-10 rounded  p-8 md:inset-y-20",
-            "flex flex-col",
+            "mx-auto flex max-w-300 flex-col",
             "overflow-x-hidden overflow-y-auto border-4 border-taupe-300 bg-taupe-200 shadow-sm shadow-taupe-100/50",
         ]}
     >
@@ -79,25 +91,17 @@
 </div>
 
 <style lang="postcss">
+    @import "./fonts.css";
     @reference "tailwindcss";
 
-    @import "./fonts.css";
-
-    @keyframes ribbonAnimation {
-        20% {
-            transform: translateY(20%);
-        }
-        100% {
-            transform: translateY(-100%);
-        }
-    }
 
     .menu {
         position: relative;
         z-index: 10;
-        --gap: 10;
-        width: calc(100% - --spacing(2 * var(--gap)));
-        left: --spacing(var(--gap));
+
+        @apply w-[90%] md:max-w-240;
+        left: 50%;
+        translate: -50%;
 
         .background,
         .content {

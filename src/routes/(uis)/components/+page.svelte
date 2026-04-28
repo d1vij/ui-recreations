@@ -3,11 +3,7 @@
     import type { Pathname } from "$app/types";
     import { draw } from "radashi";
 
-    const glob = import.meta.glob("./\\(comps\\)/**/\\+page.svelte");
-    const endpoints = Object.keys(glob).map((e) =>
-        e.replace("./(comps)/", "").replace("/+page.svelte", "")
-    );
-
+    import { endpoints } from "./endpoints";
     const randomEndpoint = draw(endpoints);
 </script>
 
