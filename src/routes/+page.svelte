@@ -32,6 +32,11 @@
                 "https://www.youtube.com/watch?v=S98uVU2CAl0"
             )}
             {@render Link("/profile-card", "Profile Card", "https://airtelblack.com")}
+            {@render Link(
+                "/polygon-sliced-theme-toggle-navbar",
+                "Polygon Sliced Theme Toggle Navbar",
+                "https://freefrontend.com/code/polygon-sliced-theme-toggle-navbar-2026-04-12/"
+            )}
             <!-- {@render Link(
                 "/minimal-sidebar",
                 "Minimal Sidebar",
