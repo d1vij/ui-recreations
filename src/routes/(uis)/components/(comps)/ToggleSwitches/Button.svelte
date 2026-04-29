@@ -15,7 +15,7 @@
 </script>
 
 <!-- We'll lazy import all components but only resolve them when in viewport -->
-<div class="relative flex flex-col items-center justify-between gap-4" bind:this={ref}>
+<div class="relative flex flex-col items-center justify-around gap-4" bind:this={ref}>
     {#if isInViewport.current}
         {#await componentPromise then Button}
             <Button />
