@@ -11,7 +11,7 @@
     class={[
         "container",
         // "grid w-full grid-cols-4 justify-items-center gap-x-16 gap-y-32 overflow-auto p-9 ",
-        "flex gap-x-16 gap-y-32 flex-wrap p-8"
+        "flex flex-wrap gap-x-16 gap-y-32 p-8",
     ]}
     bind:this={ref}
 >

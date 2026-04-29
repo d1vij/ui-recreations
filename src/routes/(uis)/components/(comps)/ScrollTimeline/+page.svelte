@@ -4,13 +4,13 @@
     import { onMount } from "svelte";
     import { on } from "svelte/events";
     import { Tween } from "svelte/motion";
-    import {sineOut } from "svelte/easing";
+    import { sineOut } from "svelte/easing";
     import { useVibrate } from "@d1vij/shit-i-always-use/svelte";
     const { data }: PageProps = $props();
 
     let containerRef = $state<HTMLDivElement | null>(null);
     let progressRef = $state<HTMLDivElement | null>(null);
-    const scrollProgress = new Tween(20, { duration: 250, easing: sineOut});
+    const scrollProgress = new Tween(20, { duration: 250, easing: sineOut });
 
     onMount(() => {
         if (containerRef === null) return;
@@ -24,7 +24,7 @@
             const width = target.offsetWidth;
             scrollProgress.set(ratio * width + 20);
 
-            if(scrollHeight % 20 === 0) {
+            if (scrollHeight % 20 === 0) {
                 useVibrate(200);
             }
         });
@@ -40,7 +40,7 @@
 
 <div
     style:width={`${scrollProgress.current}px`}
-    class="absolute top-0 left-0 z-20 h-4 bg-taupe-700 rounded-r-full"
+    class="absolute top-0 left-0 z-20 h-4 rounded-r-full bg-taupe-700"
     bind:this={progressRef}
 ></div>
 <div
