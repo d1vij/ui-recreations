@@ -13,9 +13,9 @@
         { title: "Temperature Converter", path: "/7guis/Temperature-Converter" },
         { title: "Flight Booker", path: "/7guis/Flight-Booker" },
         { title: "Timer", path: "/7guis/Timer" },
-        { title: "CRUD", path: "/7guis/CRUD" },
-        { title: "Circle Drawer", path: "/7guis/Circle-Drawer" },
-        { title: "Cells", path: "/7guis/Cells" },
+        // { title: "CRUD", path: "/7guis/CRUD" },
+        // { title: "Circle Drawer", path: "/7guis/Circle-Drawer" },
+        // { title: "Cells", path: "/7guis/Cells" },
     ];
 
     let currentPathname = $derived(page.url.pathname);

@@ -32,11 +32,11 @@
                 "https://www.youtube.com/watch?v=S98uVU2CAl0"
             )}
             {@render Link("/profile-card", "Profile Card", "https://airtelblack.com")}
-            {@render Link(
+            <!-- {@render Link(
                 "/minimal-sidebar",
                 "Minimal Sidebar",
                 "https://dribbble.com/shots/23883932-Minimal-sidebar-navigation-Untitled-UI"
-            )}
+            )} -->
         </nav>
     </div>
 </div>
