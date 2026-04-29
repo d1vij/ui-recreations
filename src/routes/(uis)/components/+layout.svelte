@@ -6,7 +6,6 @@
     import { DocumentTitle } from "./Contexts.svelte";
     import { endpoints } from "./endpoints";
     import { onNavigate } from "$app/navigation";
-    import { range } from "@d1vij/shit-i-always-use";
     import { title } from "radashi";
     const { children } = $props();
 
@@ -34,17 +33,15 @@
                 <nav
                     class="grid grid-cols-2 gap-2 p-4 pt-6 font-[Gloock] md:grid-cols-3 md:text-lg"
                 >
-                    {#each range(10)}
-                        {#each endpoints as e (e)}
-                            <span class={[""]}>
-                                <a
-                                    href={resolve(`/(uis)/components/(comps)/${e}` as Pathname)}
-                                    class=""
-                                >
-                                    {title(e)}
-                                </a>
-                            </span>
-                        {/each}
+                    {#each endpoints as e (e)}
+                        <span class={[""]}>
+                            <a
+                                href={resolve(`/(uis)/components/(comps)/${e}` as Pathname)}
+                                class=""
+                            >
+                                {title(e)}
+                            </a>
+                        </span>
                     {/each}
                 </nav>
                 <div class="h-15 w-full"></div>
@@ -94,10 +91,9 @@
     @import "./fonts.css";
     @reference "tailwindcss";
 
-
     .menu {
         position: relative;
-        z-index: 10;
+        z-index: 100000;
 
         @apply w-[90%] md:max-w-240;
         left: 50%;
@@ -180,9 +176,5 @@
 
         transition: translate 1.5s var(--timing-fn);
         @apply translate-y-[-50%] hover:translate-y-[-45%] active:translate-y-[-30%];
-    }
-
-    .menu.open ~ .menu-toggle {
-        @apply translate-y-[-80%] hover:translate-y-[-70%] active:translate-y-[-55%];
     }
 </style>

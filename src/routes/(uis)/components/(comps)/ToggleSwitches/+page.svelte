@@ -1,13 +1,25 @@
 <script lang="ts">
-    import Fluid from "./buttons/Fluid.svelte";
+    import type { Component } from "svelte";
+    import Button from "./Button.svelte";
+    const glob = import.meta.glob<Component>("./buttons/*.svelte", { import: "default" });
+    const buttonPromises = Object.values(glob);
 
-    const buttons = [Fluid];
+    let ref = $state<HTMLDivElement | null>(null);
 </script>
 
-<div class="absolute inset-0 grid grid-cols-3 place-items-center gap-16 overflow-auto p-8">
-    {#each buttons as Btn, idx (idx)}
-        <div class="relative flex size-fit flex-col items-center gap-1 place-self-start">
-            <Btn />
-        </div>
+<div
+    class={[
+        "container",
+        // "grid w-full grid-cols-4 justify-items-center gap-x-16 gap-y-32 overflow-auto p-9 ",
+        "flex gap-x-16 gap-y-32 flex-wrap p-8"
+    ]}
+    bind:this={ref}
+>
+    {#each buttonPromises as btnPromise, idx (idx)}
+        <Button componentPromise={btnPromise()} parent={ref} />
     {/each}
 </div>
+
+<style lang="postcss">
+    @reference "tailwindcss";
+</style>
