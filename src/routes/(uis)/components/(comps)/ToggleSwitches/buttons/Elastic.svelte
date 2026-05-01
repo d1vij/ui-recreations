@@ -4,11 +4,7 @@
 </script>
 
 {#snippet Button(label: string)}
-    <label class="wrapper"
-
-        {@attach vibrateOnClick(200)}
-
-    >
+    <label class="wrapper" {@attach vibrateOnClick(200)}>
         <input type="checkbox" />
         <span class="label">{label}</span>
         <span class="check">☑</span>

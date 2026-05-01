@@ -36,6 +36,8 @@
         href="https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=block"
         rel="stylesheet"
     />
+
+    <title>Components | Scroll Timeline</title>
 </svelte:head>
 
 <div

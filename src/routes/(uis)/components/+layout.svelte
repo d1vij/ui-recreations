@@ -3,7 +3,6 @@
     import type { Pathname } from "$app/types";
 
     import { onClickOutsideAttachment, vibrateOnClick } from "@d1vij/shit-i-always-use/svelte";
-    import { DocumentTitle } from "./Contexts.svelte";
     import { endpoints } from "./endpoints";
     import { onNavigate } from "$app/navigation";
     import { title } from "radashi";
@@ -11,15 +10,10 @@
 
     let menuOpen = $state(false);
 
-    DocumentTitle.set("Home");
     onNavigate(() => {
         menuOpen = false;
     });
 </script>
-
-<svelte:head>
-    <title>Components | {DocumentTitle.get()}</title>
-</svelte:head>
 
 <div class={["bg-taupe-800", "absolute inset-0 overflow-clip"]}>
     <aside

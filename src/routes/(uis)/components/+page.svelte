@@ -10,6 +10,9 @@
 <h1 class="mb-6 font-[Caprasimo] text-4xl">Components</h1>
 <span class="mb-4 text-lg">Recreating indivisual components.</span>
 
+<svelte:head>
+    <title>Components | Home</title>
+</svelte:head>
 <div>
     <a
         href={resolve(`/components/${randomEndpoint}` as Pathname)}

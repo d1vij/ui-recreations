@@ -10,7 +10,7 @@
         {/each}
     </div>
     <div
-        class="absolute top-1/2 left-1/2 -translate-x-1/2 rotate-90  text-neutral-600 md:rotate-0 font-serif"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 rotate-90 font-serif text-neutral-600 md:rotate-0"
     >
         (uses no js)
     </div>

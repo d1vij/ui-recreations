@@ -7,6 +7,10 @@
     let ref = $state<HTMLDivElement | null>(null);
 </script>
 
+<svelte:head>
+    <title>Components | Toggle Switches</title>
+</svelte:head>
+
 <div
     class={[
         "container",
