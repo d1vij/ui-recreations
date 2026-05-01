@@ -1,1 +1,0 @@
-import"../chunks/D6mgWcnR.js";import{e as r,$ as t}from"../chunks/caYdqzVo.js";import{a as e,f as i}from"../chunks/DJIfaYBt.js";import{h as m}from"../chunks/Ci4ZWLge.js";var p=i("<div></div>");function c(o){var a=p();m("1avleie",f=>{r(()=>{t.title="7guis | CRUD"})}),e(o,a)}export{c as component};

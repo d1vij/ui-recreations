@@ -1,0 +1,1 @@
+import"./9JzyCelx.js";import{c as o,r as p}from"./xYj0FIRA.js";import{a as e,f as m}from"./8Q-a3YFC.js";import{s as i}from"./be5QCGfc.js";var n=m('<span class="text-sm text-taupe-700"><!></span>');function h(r,t){var a=n(),s=o(a);i(s,()=>t.children),p(a),e(r,a)}export{h as T};
