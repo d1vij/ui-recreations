@@ -10,7 +10,6 @@
     let progressRef = $state<HTMLDivElement | null>(null);
     const scrollProgress = new Tween(20, { duration: 250, easing: sineOut });
 
-
     onMount(() => {
         if (containerRef === null) return;
         return on(containerRef, "scroll", async (e) => {
@@ -21,7 +20,6 @@
             const ratio = currentScroll / scrollHeight;
             const width = target.offsetWidth;
             scrollProgress.set(ratio * width + 20);
-
         });
     });
 </script>

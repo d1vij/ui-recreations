@@ -18,7 +18,7 @@
 </script>
 
 <div
-    class="w-full md:w-fit space-y-4 rounded-lg border border-neutral-300 bg-neutral-200 px-5 py-10 shadow-sm md:px-20"
+    class="w-full space-y-4 rounded-lg border border-neutral-300 bg-neutral-200 px-5 py-10 shadow-sm md:w-fit md:px-20"
 >
     <div
         class="input-wrapper"
