@@ -72,7 +72,7 @@
     <main
         class={[
             "font-[Gloock]",
-            "absolute inset-x-5 inset-y-10 rounded  p-8 md:inset-y-20",
+            "absolute inset-x-5 inset-y-10 rounded p-4 md:inset-y-20 md:p-8",
             "mx-auto flex max-w-300 flex-col",
             "overflow-x-hidden overflow-y-auto border-4 border-taupe-300 bg-taupe-200 shadow-sm shadow-taupe-100/50",
         ]}

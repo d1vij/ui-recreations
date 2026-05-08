@@ -4,24 +4,26 @@
 </script>
 
 {#snippet Button(label: string)}
-    <label class="wrapper" {@attach vibrateOnClick(200)}>
+    <label class="wrapper" {@attach vibrateOnClick(100)}>
         <input type="checkbox" />
         <span class="label">{label}</span>
         <span class="check">☑</span>
     </label>
 {/snippet}
-<div class="flex w-fit gap-4 bg-slate-900 px-4 py-2 transition-all">
+<div class="flex w-full flex-wrap justify-center gap-2 bg-slate-900 px-4 py-2 transition-all">
     {@render Button("Apple")}
     {@render Button("Banana")}
     {@render Button("Orange")}
+    {@render Button("Grapes")}
+    {@render Button("Pineapple")}
 </div>
 <Title>Elastic</Title>
 
 <style lang="postcss">
     @reference "tailwindcss";
     .wrapper {
-        @apply h-10 cursor-pointer bg-slate-700 text-lg text-gray-300 select-none;
-        @apply rounded-2xl border-2 border-gray-300 p-3;
+        @apply cursor-pointer bg-slate-700 text-sm text-gray-300 select-none md:text-lg;
+        @apply rounded-2xl border-2 border-gray-300 px-3 py-2;
         @apply flex items-center justify-center gap-2;
         @apply transition-all duration-300;
 

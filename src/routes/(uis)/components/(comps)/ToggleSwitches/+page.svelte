@@ -11,14 +11,7 @@
     <title>Components | Toggle Switches</title>
 </svelte:head>
 
-<div
-    class={[
-        "container",
-        // "grid w-full grid-cols-4 justify-items-center gap-x-16 gap-y-32 overflow-auto p-9 ",
-        "flex flex-wrap gap-x-16 gap-y-32 p-8",
-    ]}
-    bind:this={ref}
->
+<div class={["flex flex-wrap gap-x-16 gap-y-32 justify-center md:justify-start"]} bind:this={ref}>
     {#each buttonPromises as btnPromise, idx (idx)}
         <Button componentPromise={btnPromise()} parent={ref} />
     {/each}
