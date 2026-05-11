@@ -1,0 +1,1 @@
+import{r}from"../chunks/BzAavJ1z.js";import{R as t}from"../chunks/-UyI9lYi.js";import"../chunks/CO1eN_y7.js";import"../chunks/Dq2A2RdI.js";function n(o,e){throw new t(o,e.toString())}const i=()=>{n(303,r("/7guis/Counter"))},l=Object.freeze(Object.defineProperty({__proto__:null,load:i},Symbol.toStringTag,{value:"Module"}));function m(o){}export{m as component,l as universal};
