@@ -1,6 +1,7 @@
 <script lang="ts">
     import RippleEffect from "./RippleEffect/RippleEffect.svelte";
     import Button2 from "./Button2.svelte";
+    import ButtonThatRemembers from "./ButtonThatRemembers.svelte";
 </script>
 
 <div class="size-full">
@@ -8,9 +9,12 @@
     <RippleEffect />
     <hr />
 
-
     <h2 class="subtitle">https://dribbble.com/shots/23441010--Button-Hover-Animation-CSS</h2>
-    <Button2/>
+    <Button2 />
+
+    <hr />
+    <h2 class="subtitle">https://dribbble.com/shots/23441010--Button-Hover-Animation-CSS</h2>
+    <ButtonThatRemembers/>
 </div>
 
 <style lang="postcss">
@@ -21,6 +25,6 @@
     }
 
     hr {
-        @apply my-5 border-2 rounded-full border-taupe-300;
+        @apply my-5 rounded-full border-2 border-taupe-300;
     }
 </style>
