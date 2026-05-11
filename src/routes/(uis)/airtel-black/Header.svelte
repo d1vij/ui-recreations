@@ -48,7 +48,7 @@
     </div>
 </header>
 
-<style lang="scss">
+<style>
     @keyframes pulsing {
         0%,
         100% {

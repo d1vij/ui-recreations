@@ -72,7 +72,7 @@
     </div>
 </section>
 
-<style lang="scss">
+<style>
     @keyframes marquee {
         0% {
             transform: translate(0%);
