@@ -68,7 +68,7 @@
         }
 
     }
-    .btn:is(:hover, :active, :focus) .thumb {
+    .btn:is(:hover, :active) .thumb {
         transform: translate(0);
     }
     .btn {
