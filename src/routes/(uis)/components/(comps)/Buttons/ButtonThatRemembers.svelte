@@ -8,7 +8,7 @@
 </script>
 
 {#snippet Fingerprint(x: string, y: string)}
-    <div class="fingerprint" style:--x={x} style:--y={y} style:--rot={`${random(-25, 5)}deg`}></div>
+    <div class="fingerprint" style:--x={x} style:--y={y} style:--rot={`${random(-15, 5)}deg`}></div>
 {/snippet}
 
 <button
@@ -34,7 +34,7 @@
     @reference "tailwindcss";
 
     .btn {
-        @apply relative rounded border-2 border-neutral-700 bg-neutral-900 px-15 w-full py-4 text-lg text-neutral-300;
+        @apply relative rounded border-2 border-neutral-700 bg-neutral-900 px-15 w-full md:w-fit py-4 text-lg text-neutral-300;
         @apply cursor-pointer overflow-clip;
 
         transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
