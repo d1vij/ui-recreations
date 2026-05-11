@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+
+@keyframes ripple {
+
+    from {
+        /*left: var(--left-from);
+        right: var(--right-from);*/
+        opacity: 1;
+    }
+
+    to {
+        left: 0;
+        right: 0;
+        opacity: 0;
+    }
+}
+
+.btn {
+    @apply bg-black border-2 border-neutral-400 text-neutral-100 py-2 px-10 rounded-2xl cursor-pointer overflow-clip relative;
+
+    .ripple {
+        @apply bg-neutral-500/80 rounded-xl;
+
+        animation: ripple 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}

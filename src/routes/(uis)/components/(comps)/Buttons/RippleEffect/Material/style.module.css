@@ -1,0 +1,26 @@
+@reference "tailwindcss";
+
+@keyframes grow {
+    from {
+        /*translate results in using GPU instead of CPU*/
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+}
+
+.btn {
+    @apply relative cursor-pointer overflow-clip px-4 py-2 rounded-full select-none;
+    @apply border-2 border-blue-500 text-blue-950;
+
+    /*Bg clip padding stops the gradient on inner side of box*/
+    @apply bg-linear-to-b from-blue-400 to-blue-600 bg-clip-padding to-95%;
+
+    .ripple {
+        @apply rounded-full bg-blue-300/40;
+        animation: grow 0.6s linear forwards;
+    }
+}
