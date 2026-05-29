@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-static";
+import adapter from "@sveltejs/adapter-cloudflare";
 import { relative, sep } from "node:path";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
@@ -6,9 +6,7 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 const config = {
     preprocess: vitePreprocess({}),
     compilerOptions: {
-        experimental: {
-            async: true,
-        },
+        experimental: { async: true },
         // defaults to rune mode for the project, except for `node_modules`. Can be removed in svelte 6.
         runes: ({ filename }) => {
             const relativePath = relative(import.meta.dirname, filename);
@@ -19,15 +17,8 @@ const config = {
         },
     },
     kit: {
-        paths: {
-            base: "/ui-recreations",
-        },
-        router: {
-            // type: "hash",
-        },
-        adapter: adapter({
-            fallback: "404.html",
-        }),
+        router: {},
+        adapter: adapter(),
     },
 };
 
